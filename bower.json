@@ -1,0 +1,20 @@
+{
+  "name": "test-frontend",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jpdibacco/test-frontend",
+  "authors": [
+    "Juan Patricio Di Bacco"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "vue": "~2.3.3"
+  }
+}
