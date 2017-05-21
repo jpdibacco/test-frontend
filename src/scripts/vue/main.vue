@@ -30,7 +30,7 @@ main.main-view
 module.exports = {
   data: function(){
     return {
-      texts: 'some chinese text'
+      texts: 'some text testing'
     };
   }
 };

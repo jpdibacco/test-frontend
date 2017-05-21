@@ -36,7 +36,7 @@ gulp.task('lib-css', function() {
 });
 
 gulp.task('fonts', function() {
-  return gulp.src(['./src/assets/fonts/*.eot', './src/assets/fonts/*.svg', './src/assets/fonts/*.tiff', './src/assets/fonts/*.woff']).pipe(gulp.dest('./public/fonts'));
+  return gulp.src(['./src/fonts/*.eot', './src/fonts/*.svg', './src/fonts/*.tiff', './src/fonts/*.ttf', './src/fonts/*.woff', './src/fonts/*.woff2']).pipe(gulp.dest('./public/fonts'));
 });
 
 gulp.task('sprite', function() {
