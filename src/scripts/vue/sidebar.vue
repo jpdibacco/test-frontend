@@ -2,10 +2,10 @@
 aside.leftMenu
   background-color:#eeefef
 </style>
-<template lang="jade">
+<template lang="pug">
 aside.leftMenu
   p.center
-    img(src="/images/jpdibacco.png" layout_size="2x")
+    img(src="/images/jpdibacco.jpg" layout_size="2x")
   .data-bind {{texts}}
 </template>
 

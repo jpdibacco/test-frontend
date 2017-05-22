@@ -19,7 +19,7 @@
   .data-bind
     color #fff
 </style>
-<template lang="jade">
+<template lang="pug">
 main.main-view
   p.center
     img(src="/images/main_text.png" layout_size="2x")

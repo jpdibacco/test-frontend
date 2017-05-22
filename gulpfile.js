@@ -5,7 +5,7 @@ spritesmith = require('gulp.spritesmith'),
 pleeease = require('gulp-pleeease'),
 minifyCss = require('gulp-minify-css'),
 rename = require('gulp-rename'),
-jade = require('gulp-jade'),
+pug = require('gulp-pug'),
 connect = require('gulp-connect'),
 util = require('gulp-util'),
 filter = require('gulp-filter'),
@@ -56,10 +56,10 @@ gulp.task('images', function() {
   return gulp.src(['./src/assets/*.*', './src/assets/samples/*.*', './src/assets/components/*.*', './src/design/assets/*.*']).pipe(gulp.dest('./public/images'));
 });
 
-gulp.task('jade', function() {
-  return gulp.src(['./src/jade/!(_)*.jade']).pipe(jade({
+gulp.task('pug', function() {
+  return gulp.src(['./src/pug/!(_)*.pug']).pipe(pug({
     pretty: true,
-    basedir: '.src/jade'
+    basedir: '.src/pug'
   })).pipe(gulp.dest('./public')).pipe(connect.reload());
 });
 
@@ -84,8 +84,8 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function() {
   gulp.watch("./src/styles/stylus/**/*.styl", ['stylus']);
-  gulp.watch("./src/jade/**/*.jade", ['jade']);
+  gulp.watch("./src/pug/**/*.pug", ['pug']);
   return gulp.watch("./src/scripts/**/*.*", ['script']);
 });
 
-gulp.task('default', ['bower', 'sprite', 'images', 'fonts', 'lib-css', 'stylus', 'jade', 'script', 'connect', 'watch']);
+gulp.task('default', ['bower', 'sprite', 'images', 'fonts', 'lib-css', 'stylus', 'pug', 'script', 'connect', 'watch']);

@@ -10,8 +10,9 @@
     margin-left -4px
 </style>
 
-<template lang="jade">
+<template lang="pug">
 nav.header
+  p(some header content)
   img(src="/images/header.png" layout_size="2x")
 </template>
 
