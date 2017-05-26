@@ -53,7 +53,7 @@ gulp.task('sprite', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src(['./src/assets/*.*', './src/assets/samples/*.*', './src/assets/components/*.*', './src/design/assets/*.*']).pipe(gulp.dest('./public/images'));
+  return gulp.src(['./src/assets/*.*', './src/assets/samples/*.*', './src/assets/components/*.*', './src/design/assets/*.*','./src/images/*.*']).pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('pug', function() {

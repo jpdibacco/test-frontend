@@ -1,19 +1,10 @@
 <style lang="stylus">
-.header
-  max-width (720/2) px
-  position fixed
-  width 100%
-  z-index 999
-  overflow hidden
-  img[layout_size="2x"]
-    width 102%
-    margin-left -4px
 </style>
 
 <template lang="pug">
-nav.header
-  p(some header content)
-  img(src="/images/header.png" layout_size="2x")
+//- nav.header
+//-   p(some header content)
+//-   img(src="/images/jpdibacco.jpg")
 </template>
 
 <script>

@@ -7,7 +7,8 @@ App = module.exports = new Vue({
   components: {
     'vue-header'  : require('./vue/header.vue'),
     'vue-sidebar' : require('./vue/sidebar.vue'),
-    'vue-main'    : require('./vue/main.vue')
+    'vue-main'    : require('./vue/main.vue'),
+    'vue-about'   : require('./vue/about.vue')
   },
 
   data:{
