@@ -95,7 +95,7 @@ ul#contactlinks li a
   padding-top:10px
   color:#9fa0a0
   font-family: 'proxima_nova_altbold'
-ul#contactlinks li a:hover
+ul#contactlinks li a:hover,ul#contactlinks li a:hover
   text-decoration:none
 ul#contactlinks li a img
   margin-right:10px
@@ -104,11 +104,11 @@ ul#contactlinks li a img
 aside.mainProfile
   div#profile
     p.center
-      img(src="/images/jpdibacco.jpg" layout_size="2x")
-      img#flagprofile(src="/images/argentinaflag.png")
+      img(src="images/jpdibacco.jpg" layout_size="2x")
+      img#flagprofile(src="images/argentinaflag.png")
     h1.data-bind {{texts}}
     h2#jobid web developer
-    p #[img(src="/images/locpin.png" alt="Buenos Aires, Argentina")] Buenos Aires, Argentina
+    p #[img(src="images/locpin.png" alt="Buenos Aires, Argentina")] Buenos Aires, Argentina
     section.yearsXp
       div
         p 35 #[br]
@@ -122,13 +122,13 @@ aside.mainProfile
     nav
       ul
         li.active
-          a(href='about') #[img(src="/images/about_icon.png" alt="About Me")] About Me
+          a(href='about') #[img(src="images/about_icon.png" alt="About Me")] About Me
         li
-          a(href='education') #[img(src="/images/education_icon.png" alt="Education")] Education
+          a(href='education') #[img(src="images/education_icon.png" alt="Education")] Education
         li
-          a(href='workxp') #[img(src="/images/workxp_icon.png" alt="Work Experience")] Work Experience
+          a(href='workxp') #[img(src="images/workxp_icon.png" alt="Work Experience")] Work Experience
         li
-          a(href='skills') #[img(src="/images/skills_icon.png" alt="Skills")] Skills
+          a(href='skills') #[img(src="images/skills_icon.png" alt="Skills")] Skills
   div#contactme
     p
       strong.text-center Interested in working with me?
@@ -136,11 +136,11 @@ aside.mainProfile
     footer
       ul#contactlinks
         li
-          a(href='mailto:jpdibacco@gmail.com')  #[img(src="/images/email_icon.png" alt="email")] jpdibacco@gmail.com
+          a(href='mailto:jpdibacco@gmail.com')  #[img(src="images/email_icon.png" alt="email")] jpdibacco@gmail.com
         li
-          a(href='http://jpdibacco.com.ar' target='_blank')  #[img(src="/images/home_icon.png" alt="email")] jpdibacco.com.ar
+          a(href='http://jpdibacco.com.ar' target='_blank')  #[img(src="images/home_icon.png" alt="email")] jpdibacco.com.ar
         li
-          a(href='http://www.linkedin.com/in/jpdibacco' target='_blank')  #[img(src="/images/linkedinicon.png" alt="email")] www.linkedin.com/in/jpdibacco
+          a(href='http://www.linkedin.com/in/jpdibacco' target='_blank')  #[img(src="images/linkedinicon.png" alt="email")] www.linkedin.com/in/jpdibacco
 </template>
 
 <script>
