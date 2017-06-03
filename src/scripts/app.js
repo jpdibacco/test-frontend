@@ -1,26 +1,25 @@
 
-var Vue  = require("vue");
+var Vue  = require("vue"),
+VueRouter = require('vue-router'),
+Education = require('./vue/education.vue'),
+About = require('./vue/about.vue'),
+WorkExperience = require('./vue/workxp.vue');
+Vue.use(VueRouter);
+const routes = [
+  {path:'/education', component: Education},
+  {path: '/workxp',component: WorkExperience},
+  {path: '/',component: About},
 
+];
+const router = new VueRouter({
+  routes,
+  mode:'history'
+})
 App = module.exports = new Vue({
-
   el: '#app',
-  components: {
-    'vue-header'  : require('./vue/header.vue'),
+  router,
+  components:{
     'vue-sidebar' : require('./vue/sidebar.vue'),
-    'vue-main'    : require('./vue/main.vue'),
-    'vue-about'   : require('./vue/about.vue')
-  },
-
-  data:{
-    todo: []
-  },
-
-  created: function(){
-
-  },
-
-  methods: {
-
+    'vue-main'    : require('./vue/main.vue')
   }
-
 });

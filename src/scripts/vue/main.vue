@@ -7,17 +7,5 @@ main.main-view
 </style>
 <template lang="pug">
 main.main-view
-  about
+  router-view
 </template>
-
-<script>
-import about from './about.vue'
-module.exports = {
-  data: function(){
-    return {
-      texts: 'some text testing'
-    };
-  },
-  components:{about}
-};
-</script>

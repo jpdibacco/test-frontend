@@ -71,7 +71,7 @@ nav ul li a
   height:50px
   text-decoration:none
   color:#000000
-nav ul li a:hover
+nav ul li a:hover,nav ul li a:focus
   text-decoration:none
 nav ul li a img
   padding-right:10px
@@ -102,53 +102,53 @@ ul#contactlinks li a img
 </style>
 <template lang="pug">
 aside.mainProfile
-  div#profile
-    p.center
-      img(src="images/jpdibacco.jpg" layout_size="2x")
-      img#flagprofile(src="images/argentinaflag.png")
-    h1.data-bind {{texts}}
-    h2#jobid web developer
-    p #[img(src="images/locpin.png" alt="Buenos Aires, Argentina")] Buenos Aires, Argentina
-    section.yearsXp
-      div
-        p 35 #[br]
-        span Y/O
-      div
-        p 10+ #[br]
-        span Y/EXPERIENCE
-      div
-        p 70+ #[br]
-        span PROJECTS DELIVERED
-    nav
-      ul
-        li.active
-          a(href='about') #[img(src="images/about_icon.png" alt="About Me")] About Me
-        li
-          a(href='education') #[img(src="images/education_icon.png" alt="Education")] Education
-        li
-          a(href='workxp') #[img(src="images/workxp_icon.png" alt="Work Experience")] Work Experience
-        li
-          a(href='skills') #[img(src="images/skills_icon.png" alt="Skills")] Skills
-  div#contactme
-    p
-      strong.text-center Interested in working with me?
-    p Awesome! I'm available for full-time or freelance opportunities. #[br]Get in touch:
-    footer
-      ul#contactlinks
-        li
-          a(href='mailto:jpdibacco@gmail.com')  #[img(src="images/email_icon.png" alt="email")] jpdibacco@gmail.com
-        li
-          a(href='http://jpdibacco.com.ar' target='_blank')  #[img(src="images/home_icon.png" alt="email")] jpdibacco.com.ar
-        li
-          a(href='http://www.linkedin.com/in/jpdibacco' target='_blank')  #[img(src="images/linkedinicon.png" alt="email")] www.linkedin.com/in/jpdibacco
+	div#profile
+		p.center
+			img(src="images/jpdibacco.jpg" layout_size="2x")
+			img#flagprofile(src="images/argentinaflag.png")
+		h1.data-bind {{texts}}
+		h2#jobid web developer
+		p #[img(src="images/locpin.png" alt="Buenos Aires, Argentina")] Buenos Aires, Argentina
+		section.yearsXp
+			div
+				p 35 #[br]
+				span Y/O
+			div
+				p 10+ #[br]
+				span Y/EXPERIENCE
+			div
+				p 70+ #[br]
+				span PROJECTS DELIVERED
+		nav
+			ul#homelinks
+				li.active
+					router-link(to="/" v-on:click="makeActive()") #[img(src="images/about_icon.png" alt="About Me")] About Me
+				li(:class="activeClass")
+					router-link(to="education" v-on:click='makeActive()') #[img(src="images/education_icon.png" alt="Education")] Education
+				li(:class="activeClass")
+					router-link(to='workxp' v-on:click='makeActive()') #[img(src="images/workxp_icon.png" alt="Work Experience")] Work Experience
+				li(:class="activeClass")
+					router-link(to='skills' v-on:click='makeActive()') #[img(src="images/skills_icon.png" alt="Skills")] Skills
+	div#contactme
+		p
+			strong.text-center Interested in working with me?
+		p Awesome! I'm available for full-time or freelance opportunities. #[br]Get in touch:
+		footer
+			ul#contactlinks
+				li
+					a(href='mailto:jpdibacco@gmail.com')  #[img(src="images/email_icon.png" alt="email")] jpdibacco@gmail.com
+				li
+					a(href='http://jpdibacco.com.ar' target='_blank')  #[img(src="images/home_icon.png" alt="email")] jpdibacco.com.ar
+				li
+					a(href='http://www.linkedin.com/in/jpdibacco' target='_blank')  #[img(src="images/linkedinicon.png" alt="email")] www.linkedin.com/in/jpdibacco
 </template>
 
 <script>
 module.exports = {
-  data: function(){
+  data: function() {
     return {
       texts: 'Juan Patricio Di Bacco'
-    };
+    }
   }
-};
+}
 </script>
