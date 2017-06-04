@@ -9,3 +9,5 @@ main.main-view
 main.main-view
   router-view
 </template>
+<script>
+</script>

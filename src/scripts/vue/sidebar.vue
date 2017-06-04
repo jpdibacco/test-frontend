@@ -64,7 +64,7 @@ nav ul li
   border-bottom:1px solid #CCC
   background-color:#FFF
   opacity:0.5
-nav ul li.active
+nav ul li.active, .router-link-exact-active.router-link-active
   background-color:#eeefef
   opacity:1
 nav ul li a
@@ -121,14 +121,10 @@ aside.mainProfile
 				span PROJECTS DELIVERED
 		nav
 			ul#homelinks
-				li.active
-					router-link(to="/" v-on:click="makeActive()") #[img(src="images/about_icon.png" alt="About Me")] About Me
-				li(:class="activeClass")
-					router-link(to="education" v-on:click='makeActive()') #[img(src="images/education_icon.png" alt="Education")] Education
-				li(:class="activeClass")
-					router-link(to='workxp' v-on:click='makeActive()') #[img(src="images/workxp_icon.png" alt="Work Experience")] Work Experience
-				li(:class="activeClass")
-					router-link(to='skills' v-on:click='makeActive()') #[img(src="images/skills_icon.png" alt="Skills")] Skills
+				router-link(to="/" exact tag="li") #[a(title="about me") #[img(src="images/about_icon.png" alt="About Me")] About Me]
+				router-link(to="education" exact tag="li") #[a(title="education") #[img(src="images/education_icon.png" alt="Education")] Education]
+				router-link(to='workxp' exact tag="li") #[a(title="workxp") #[img(src="images/workxp_icon.png" alt="Work Experience")] Work Experience]
+				router-link(to='skills' exact tag="li") #[a(title="skills") #[img(src="images/skills_icon.png" alt="Skills")] Skills]
 	div#contactme
 		p
 			strong.text-center Interested in working with me?
@@ -142,7 +138,6 @@ aside.mainProfile
 				li
 					a(href='http://www.linkedin.com/in/jpdibacco' target='_blank')  #[img(src="images/linkedinicon.png" alt="email")] www.linkedin.com/in/jpdibacco
 </template>
-
 <script>
 module.exports = {
   data: function() {
